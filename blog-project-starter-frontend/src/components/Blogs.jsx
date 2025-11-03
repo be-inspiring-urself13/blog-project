@@ -11,7 +11,7 @@ function Blogs() {
 
     useEffect(() => {
         window.scrollTo(0, 0);
-        axios.get(`${import.meta.env.VITE_BACKEND_URL}/api/blogs`).then((res) => {
+        axios.get("https://localhost:5000/api/posts").then((res) => {
             console.log(res.data)
             setBlogs(res.data)
         }).catch(() => {
